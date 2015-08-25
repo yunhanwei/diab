@@ -145,14 +145,14 @@
 
 	-->
     <target name="start" description="Start Tomcat application">
-        <start url="${tomcat.manager.url}"
+        <catalina-start url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
                  path="/${name}"/>
     </target>
 
     <target name="stop" description="Stop Tomcat application">
-        <stop url="${tomcat.manager.url}"
+        <catalina-stop url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
                  path="/${name}"/>
