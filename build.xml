@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <project name="diab" basedir="." default="usage">
-	property file="build.properties"/>
+	<property file="build.properties"/>
 
 	<property name="src.dir" value="src"/>
     <property name="web.dir" value="war"/>
@@ -41,7 +41,7 @@
 
     <target name="build" description="Compile main source tree java files">
         <mkdir dir="${build.dir}"/>
-        <javac destdir="${build.dir}" source="1.5" target="1.5" debug="true"
+        <javac destdir="${build.dir}" source="1.8" target="1.8" debug="true"
                deprecation="false" optimize="false" failonerror="true">
             <src path="${src.dir}"/>
             <classpath refid="master-classpath"/>
