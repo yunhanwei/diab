@@ -39,10 +39,10 @@
         <echo message="list      -> List Tomcat applications"/>
     	-->
 
-    	<echo message="stop      -> Stop Tomcat webapp"/>
-    	<echo message="start     -> Start Tomcat webapp"/>
-    	<echo message="undeploy  -> Undeploy webapp"/>
-    	<echo message="deploy    -> Deploy webapp"/>
+    	<echo message="stop-webapp      -> Stop Tomcat webapp"/>
+    	<echo message="start-webapp     -> Start Tomcat webapp"/>
+    	<echo message="undeploy-webapp  -> Undeploy webapp"/>
+    	<echo message="deploy-webapp    -> Deploy webapp"/>
     	<echo message="list      -> List Tomcat applications"/>
 
         <echo message=""/>
