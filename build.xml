@@ -39,8 +39,8 @@
         <echo message="list      -> List Tomcat applications"/>
     	-->
 
-    	<echo message="stop-webapp      -> Stop Tomcat webapp"/>
-    	<echo message="start-webapp     -> Start Tomcat webapp"/>
+    	<echo message="stop      -> Stop Tomcat"/>
+    	<echo message="start     -> Start Tomcat"/>
     	<echo message="undeploy-webapp  -> Undeploy webapp"/>
     	<echo message="deploy-webapp    -> Deploy webapp"/>
     	<echo message="list      -> List Tomcat applications"/>
@@ -143,6 +143,7 @@
                  path="/${name}"/>
     </target>
 
+	-->
     <target name="start" description="Start Tomcat application">
         <start url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
@@ -157,14 +158,14 @@
                  path="/${name}"/>
     </target>
 
-    <target name="list" description="List Tomcat applications">
+<!--     <target name="list" description="List Tomcat applications">
         <list url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"/>
-    </target>
--->
+    </target> -->
+
 	
-	<target name="stop-webapp">
+<!-- 	<target name="stop-webapp">
 		<catalina-stop url="${tomcat.manager.url}"
 			username="${tomcat.username}"
 			password="${tomcat.password}"
@@ -177,7 +178,7 @@
 			username="${tomcat.username}"
 			password="${tomcat.password}"
 			path="/${webapp.name}"/>
-	</target>
+	</target> -->
 
 	<target name="undeploy-webapp">
 		<catalina-undeploy url="${tomcat.manager.url}"
