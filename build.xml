@@ -31,19 +31,19 @@
         <echo message="build     -> Build the application"/>
         <echo message="deploy    -> Deploy application as directory"/>
         <echo message="deploywar -> Deploy application as a WAR file"/>
-        <!--
+        
         <echo message="install   -> Install application in Tomcat"/>
         <echo message="reload    -> Reload application in Tomcat"/>
         <echo message="start     -> Start Tomcat application"/>
         <echo message="stop      -> Stop Tomcat application"/>
         <echo message="list      -> List Tomcat applications"/>
-    	-->
+    	
 
-    	<echo message="stop      -> Stop Tomcat"/>
+<!--     	<echo message="stop      -> Stop Tomcat"/>
     	<echo message="start     -> Start Tomcat"/>
     	<echo message="undeploy-webapp  -> Undeploy webapp"/>
     	<echo message="deploy-webapp    -> Deploy webapp"/>
-    	<echo message="list      -> List Tomcat applications"/>
+    	<echo message="list      -> List Tomcat applications"/> -->
 
         <echo message=""/>
     </target>
@@ -97,14 +97,14 @@
     </path>
 
     <!-- InstallTask deprecated in tomcat6 in favor of DeployTask-->
-    <!--
-    <taskdef name="install" classname="org.apache.catalina.ant.InstallTask">
+    
+    <taskdef name="catalina-install" classname="org.apache.catalina.ant.DeployTask">
         <classpath refid="catalina-ant-classpath"/>
     </taskdef>
-	-->
-	<taskdef name="catalina-deploy" classname="org.apache.catalina.ant.DeployTask">
+	
+<!-- 	<taskdef name="catalina-deploy" classname="org.apache.catalina.ant.DeployTask">
 		<classpath refid="catalina-ant-classpath"/>
-	</taskdef>
+	</taskdef> -->
     <taskdef name="catalina-reload" classname="org.apache.catalina.ant.ReloadTask">
         <classpath refid="catalina-ant-classpath"/>
     </taskdef>
@@ -117,7 +117,7 @@
     <taskdef name="catalina-stop" classname="org.apache.catalina.ant.StopTask">
         <classpath refid="catalina-ant-classpath"/>
     </taskdef>
-    <taskdef name="catalina-findLeaks" classname="org.apache.catalina.ant.FindLeaksTask">
+<!--     <taskdef name="catalina-findLeaks" classname="org.apache.catalina.ant.FindLeaksTask">
     	<classpath refid="catalina-ant-classpath"/>
     </taskdef>
     <taskdef name="catalina-resources" classname="org.apache.catalina.ant.ResourcesTask">
@@ -125,11 +125,11 @@
     </taskdef>
     <taskdef name="catalina-undeploy" classname="org.apache.catalina.ant.UndeployTask">
     	<classpath refid="catalina-ant-classpath"/>
-    </taskdef>
+    </taskdef> -->
 
-    <!-- comment out old version
+
     <target name="install" description="Install application in Tomcat">
-        <install url="${tomcat.manager.url}"
+        <catalina-install url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
                  path="/${name}"
@@ -137,13 +137,13 @@
     </target>
 
     <target name="reload" description="Reload application in Tomcat">
-        <reload url="${tomcat.manager.url}"
+        <catalina-reload url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
                  path="/${name}"/>
     </target>
 
-	-->
+	
     <target name="start" description="Start Tomcat application">
         <catalina-start url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
@@ -158,18 +158,18 @@
                  path="/${name}"/>
     </target>
 
-<!--     <target name="list" description="List Tomcat applications">
-        <list url="${tomcat.manager.url}"
+    <target name="list" description="List Tomcat applications">
+        <catalina-list url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"/>
-    </target> -->
+    </target>
 
 	
 <!-- 	<target name="stop-webapp">
 		<catalina-stop url="${tomcat.manager.url}"
 			username="${tomcat.username}"
 			password="${tomcat.password}"
-			path="/${webapp.name}"
+			path="/${name}"
 			failonerror="false"/>
 	</target>
 
@@ -177,14 +177,14 @@
 		<catlina-start url="${tomcat.manager.url}"
 			username="${tomcat.username}"
 			password="${tomcat.password}"
-			path="/${webapp.name}"/>
+			path="/${name}"/>
 	</target> -->
-
+<!-- 
 	<target name="undeploy-webapp">
 		<catalina-undeploy url="${tomcat.manager.url}"
 			username="${tomcat.username}"
 			password="${tomcat.password}"
-			path="/${webapp.name}"
+			path="/${name}"
 			failonerror="false"/>
 	</target>
 
@@ -192,15 +192,15 @@
 		<catalina-deploy url="${tomcat.manager.url}"
 			username="${tomcat.username}"
 			password="${tomcat.password}"
-			path="/${webapp.name}"
-			war="${name}"/>
+			path="/${name}"
+			war="${name}.war"/>
 	</target>
 
 	<target name="list">
     	<catalina-list url="${tomcat.manager.url}"
              username="${tomcat.manager.username}"
              password="${tomcat.manager.password}"/>
-    </target>
+    </target> -->
 
 
 
