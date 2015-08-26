@@ -132,15 +132,15 @@
         <catalina-install url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
-                 path="/${name}"
-                 war="${name}"/>
+                 path="/"
+                 war="${name}.war"/>
     </target>
 
     <target name="reload" description="Reload application in Tomcat">
         <catalina-reload url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
-                 path="/${name}"/>
+                 path="/"/>
     </target>
 
 	
@@ -155,7 +155,7 @@
         <catalina-stop url="${tomcat.manager.url}"
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"
-                 path="/${name}"/>
+                 path="/"/>
     </target>
 
     <target name="list" description="List Tomcat applications">
