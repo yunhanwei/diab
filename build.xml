@@ -7,6 +7,7 @@
     <property name="web.dir" value="war"/>
     <property name="build.dir" value="${web.dir}/WEB-INF/classes"/>
     <property name="name" value="diab"/>
+    <property name="test.dir" value="test"/>
 
     <path id="master-classpath">
         <fileset dir="${web.dir}/WEB-INF/lib">
@@ -29,6 +30,8 @@
         <echo message="Available targets are:"/>
         <echo message=""/>
         <echo message="build     -> Build the application"/>
+	<echo message="buildtests ->Build tests"/>
+	<echo message="tests     -> Runs tests"/>
         <echo message="deploy    -> Deploy application as directory"/>
         <echo message="deploywar -> Deploy application as a WAR file"/>
         
@@ -78,6 +81,47 @@
             </fileset>
         </copy>
     </target>
+   
+    <!-- TEST TASKS -->
+
+    <taskdef name="junit"
+	classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+	<classpath refid="master-classpath"/>
+    </taskdef>
+
+    <target name="buildtests" description="Compile test tree java file">
+        <mkdir dir="${build.dir}"/>
+        <javac destdir="${build.dir}" source="1.8" target="1.8" debug="true"
+            deprecation="false" optimize="false" failonerror="true">
+            <src path="${test.dir}"/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+
+    <target name="tests" depends="build, buildtests" description="Run tests">
+    	<junit printsummary="on"
+    	    fork="false"
+    	    failureproperty="tests.failed"
+    	    showoutput="true">
+    	    <classpath refid="master-classpath"/>
+    	    <formatter type="brief" usefile="false"/>
+
+	    <batchtest>
+	        <fileset dir="${build.dir}">
+	            <include name="**/*Tests.*"/>
+	        </fileset>
+	    </batchtest>
+	</junit>
+
+	<fail if="tests.failed">
+	    tests.failed=${tests.failed}
+	    ****************************
+	    TEST FAILED WAHHHHHHHHHHHHHH
+	    ****************************
+	</fail>
+    </target>
+
+
     
 <!-- ============================================================== -->
 <!-- Tomcat tasks - remove these if you don't have Tomcat installed -->
