@@ -22,7 +22,7 @@ public class HelloController implements Controller {
 		
 		String now = (new Date()).toString();
 		logger.info("Returning hello view" + now);
-		return new ModelAndView("jsp/hello.jsp", "now", now);
+		return new ModelAndView("hello", "now", now);
 
 	}
 }
