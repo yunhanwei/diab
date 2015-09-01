@@ -15,28 +15,28 @@ public class BG{
 	public int getId(){
 		return this.id;
 	}
-	private void setId(int id){
+	public void setId(int id){
 		this.id = id;
 	}
 
 	public LocalDateTime getTimeEntered(){
 		return this.timeEntered;
 	}
-	private void setTimeEntered(LocalDateTime timeEntered){
+	public void setTimeEntered(LocalDateTime timeEntered){
 		this.timeEntered = timeEntered;
 	}
 
 	public Float getValue(){
 		return this.value;
 	}
-	private void setValue(Float value){
+	public void setValue(Float value){
 		this.value = value;
 	}
 
 	public String getNote(){
 		return this.note;
 	}
-	private void setNote(String note){
+	public void setNote(String note){
 		this.note = note;
 	}
 

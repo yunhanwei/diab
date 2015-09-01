@@ -2,7 +2,6 @@ package diab.model;
 
 import java.io.Serialiable;
 import java.lang.String;
-import java.time.LocalDateTime;
 
 
 public class Users{
@@ -17,21 +16,21 @@ public class Users{
 	public int getId(){
 		return this.id;
 	}
-	private void setId(int id){
+	public void setId(int id){
 		this.id = id;
 	}
 
 	public String getEmail(){
 		return this.email;
 	}
-	private void setEmail(String email){
+	public void setEmail(String email){
 		this.email = email;
 	}
 
 	public String getPassword(){
 		return this.password;
 	}
-	private void setPassword(String password){
+	public void setPassword(String password){
 		this.password = password;
 	}
 

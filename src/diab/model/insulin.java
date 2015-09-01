@@ -18,49 +18,49 @@ public class insulin{
 	public int getId(){
 		return this.id;
 	}
-	private void setId(int id){
+	public void setId(int id){
 		this.id = id;
 	}
 
 	public LocalDateTime getTimeEntered(){
 		return this.timeEntered;
 	}
-	private void setTimeEntered(LocalDateTime timeEntered){
+	public void setTimeEntered(LocalDateTime timeEntered){
 		this.timeEntered = timeEntered;
 	}
 
 	public Float getCarbDose(){
 		return this.carbDose;
 	}
-	private void setCarbDose(Float carbDose){
+	public void setCarbDose(Float carbDose){
 		this.carbDose = carbDose;
 	}
 
 	public Float getCorrectionDose(){
 		return this.correctionDose;
 	}
-	private void setCorrectionDose(Float correctionDose){
+	public void setCorrectionDose(Float correctionDose){
 		this.correctionDose = correctionDose;
 	}
 
 	public Float getHourlyBasalDose(){
 		return this.hourlyBasalDose;
 	}
-	private void setHourlyBasalDose(Float hourlyBasalDose){
+	public void setHourlyBasalDose(Float hourlyBasalDose){
 		this.hourlyBasalDose = hourlyBasalDose;
 	}
 
 	public String getType(){
 		return this.type();
 	}
-	private void setType(String type){
+	public void setType(String type){
 		this.type = type;
 	}
 
 	public String getNote(){
 		return this.note;
 	}
-	private void setNote(String note){
+	public void setNote(String note){
 		this.note = note;
 	}
 
