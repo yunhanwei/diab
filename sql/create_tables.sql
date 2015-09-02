@@ -11,7 +11,7 @@ CREATE TABLE data_master (
 	time_entered DATETIME,
 	time DATETIME,
 	datatype int(2) NOT NULL,
-	PRIMARY KEY(master_id)
+	PRIMARY KEY(master_id),
 	FOREIGN KEY(id) REFERENCES users(id)
 );
 
@@ -32,6 +32,6 @@ CREATE TABLE insulin (
 	hourlyBasalDose float(8,2),
 	type varchar(255) NOT NULL,
 	note varchar(255),
-	PRIMARY KEY(data_id)
+	PRIMARY KEY(data_id),
 	FOREIGN KEY(data_id) REFERENCES data_master(master_id)
 );
