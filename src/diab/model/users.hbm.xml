@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping>
+	<class name="users" table="users">
+		<id name="id" type="int" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="email" column="email" type="string"/>
+		<property name="password" column="password" type="string"/>
+	</class>
+</hibernate-mapping>

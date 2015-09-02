@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping>
+	<class name="BG" table="BG">
+		<id name="dataId" type="int" column="data_id">
+		</id>
+		<property name="timeEntered" column="time_entered" 
+			type="LocalDateTime"/>
+		<property name="value" column="value" type="float"/>
+		<property name="note" column="note" type="string"/>
+
+		<many-to-one name="DataMaster" class="diab.model.dataMaster"
+			column="data_id" unique="true" not-null="true"
+			cascade="all" />
+
+	</class>
+</hibernate-mapping>

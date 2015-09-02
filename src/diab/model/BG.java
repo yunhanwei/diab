@@ -5,18 +5,26 @@ import java.lang.String;
 import java.lang.Float;
 
 public class BG{
-	private int id;
+	private int dataId;
+	private DataMaster dataMaster;
 	private LocalDateTime timeEntered;
 	private Float value;
 	private String note;
 
 
 	//Get and set functions
-	public int getId(){
-		return this.id;
+	public int getDataId(){
+		return this.dataId;
 	}
-	public void setId(int id){
-		this.id = id;
+	public void setDataId(int dataId){
+		this.dataId = dataId;
+	}
+
+	public DataMaster getDataMaster(){
+		return this.dataMaster;
+	}
+	public void setDataMaster(DataMaster dataMaster){
+		this.dataMaster = dataMaster;
 	}
 
 	public LocalDateTime getTimeEntered(){

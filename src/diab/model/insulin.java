@@ -4,8 +4,9 @@ import java.time.LocalDateTime;
 import java.lang.String;
 import java.lang.Float;
 
-public class insulin{
-	private int id;
+public class Insulin{
+	private int dataId;
+	private DataMaster dataMaster;
 	private LocalDateTime timeEntered;
 	private Float carbDose;
 	private Float correctionDose;
@@ -15,11 +16,18 @@ public class insulin{
 
 
 	//get and set functions
-	public int getId(){
-		return this.id;
+	public int getDataId(){
+		return this.dataId;
 	}
-	public void setId(int id){
-		this.id = id;
+	public void setDataId(int dataId){
+		this.dataId = dataId;
+	}
+
+	public DataMaster getDataMaster(){
+		return this.dataMaster;
+	}
+	public void setDataMaster(DataMaster dataMaster){
+		this.dataMaster = dataMaster;
 	}
 
 	public LocalDateTime getTimeEntered(){
