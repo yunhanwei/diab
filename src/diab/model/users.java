@@ -1,6 +1,5 @@
 package diab.model;
 
-import java.io.Serialiable;
 import java.lang.String;
 
 
