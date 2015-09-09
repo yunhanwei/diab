@@ -2,12 +2,12 @@ package diab.model;
 
 import java.time.LocalDateTime;
 
-public class dataMaster{
+public class DataMaster{
 	private int masterId;
-	private users user;
+	private Users user;
 	private LocalDateTime timeEntered;
 	private LocalDateTime time;
-	private int datatype;,
+	private int datatype;
 
 
 	//Get set functions
@@ -21,7 +21,7 @@ public class dataMaster{
 	public int getUser(){
 		return this.user;
 	}
-	public void setUser(users user){
+	public void setUser(Users user){
 		this.user = user;
 	}
 
