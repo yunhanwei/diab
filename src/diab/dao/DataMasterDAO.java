@@ -13,5 +13,17 @@ import org.hibernate.criterion.Projections;
 
 public class DataMasterDAO{
 
-	
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	public void save (DataMaster dataMaster){
+		Session session = this.sessionFactory.openSession();
+		Transaction tx = null;
+
+		tx = session.beginTransaction();
+		session.save(dataMaster);
+		tx.commit();
+
+		session.close();
+	}
 }
