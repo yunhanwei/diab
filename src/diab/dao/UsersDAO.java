@@ -49,7 +49,6 @@ public class UsersDAO {
 			return returnVal;
 		}
 		else{
-			Transaction tx = null;
 			tx = session.beginTransaction();
 			session.delete(result);
 			tx.commit();

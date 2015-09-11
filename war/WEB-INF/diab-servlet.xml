@@ -30,13 +30,13 @@
 				<prop key="hibernate.current_session_context_class">thread</prop>
 				<prop key="hibernate.show_sql">false</prop>
 			</prop>
-		</property>
+		</propertyus>
 		<property name="annotatedClasses">
 			<list>
-				<value>diab.model.users</value>
-				<value>diab.model.dataMaster</value>
+				<value>diab.model.Users</value>
+				<value>diab.model.DataMaster</value>
 				<value>diab.model.BG</value>
-				<value>diab.model.insulin</value>
+				<value>diab.model.Insulin</value>
 			</list>
 		</property>
 	</bean>
@@ -46,5 +46,5 @@
 	p:sessionFactory-ref="sessionFactory">
     </bean>
 
-    
+
 </beans>

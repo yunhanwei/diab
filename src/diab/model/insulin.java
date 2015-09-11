@@ -3,6 +3,7 @@ package diab.model;
 import java.time.LocalDateTime;
 import java.lang.String;
 import java.lang.Float;
+import diab.model.DataMaster;
 
 public class Insulin{
 	private int dataId;
@@ -59,7 +60,7 @@ public class Insulin{
 	}
 
 	public String getType(){
-		return this.type();
+		return this.type;
 	}
 	public void setType(String type){
 		this.type = type;

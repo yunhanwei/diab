@@ -3,6 +3,7 @@ package diab.model;
 import java.time.LocalDateTime;
 import java.lang.String;
 import java.lang.Float;
+import diab.model.DataMaster;
 
 public class BG{
 	private int dataId;

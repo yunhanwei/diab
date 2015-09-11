@@ -1,7 +1,7 @@
 package diab.dao;
 
 import java.util.List;
-import diab.model.dataMaster;
+import diab.model.DataMaster;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
