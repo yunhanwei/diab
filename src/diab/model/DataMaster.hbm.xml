@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping>
+	<class name="DataMaster" table="data_master">
+		<id name="masterId" type="int" column="master_id">
+		</id>
+		<property name="timeEntered" column="time_entered" 
+			type="LocalDateTime"/>
+		<property name="time" column="time" 
+			type="LocalDateTime"/>
+
+		<many-to-one name="Users" class="diab.model.Users"
+			column="id" unique="true" not-null="true"
+			cascade="all" />
+
+	</class>
+</hibernate-mapping>
