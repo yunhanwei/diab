@@ -40,7 +40,8 @@ public class UsersDAO {
 		tx = session.beginTransaction();
 		Criteria cr = session.createCriteria(Users.class);
 		cr.add(Restrictions.eq("id", id));
-		Users result = cr.uniqueResult();
+		Users result = new Users();	
+		result =(Users)cr.uniqueResult();
 		tx.commit();
 
 		if(result.equals(null)){

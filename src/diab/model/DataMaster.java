@@ -18,7 +18,7 @@ public class DataMaster{
 		this.masterId = masterId;
 	}
 
-	public int getUser(){
+	public Users getUser(){
 		return this.user;
 	}
 	public void setUser(Users user){
