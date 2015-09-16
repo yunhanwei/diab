@@ -26,7 +26,7 @@ public class UsersDAO {
 		Transaction tx = null;
 
 		tx = session.beginTransaction();
-		session.save(user);
+		session.update(user);
 		tx.commit();
 
 		session.close();
@@ -56,6 +56,17 @@ public class UsersDAO {
 			returnVal = "User " + id + " was deleted sucessfully";
 		}
 
+	}
+
+	public void add (Users user){
+		Session session = this.sessionFactory.openSession();
+		Transaction tx = null;
+
+		tx = session.beginTransaction();
+		session.persist(user);
+		tx.commit();
+
+		session.close();
 	}
 
 
