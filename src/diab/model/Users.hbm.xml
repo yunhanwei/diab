@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <hibernate-mapping>
-	<class name="Users" table="users">
+	<class name="diab.model.Users" table="users">
 		<id name="id" type="int" column="id">
 			<generator class="native"/>
 		</id>

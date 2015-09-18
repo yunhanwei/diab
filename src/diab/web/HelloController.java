@@ -21,6 +21,8 @@ public class HelloController implements Controller {
 		throws ServletException, IOException {
 		
 		String now = (new Date()).toString();
+		//want to pass data from sql -> hibernate dao -> helloservice -> helloctonroller -> jsp
+
 		logger.info("Returning hello view" + now);
 		return new ModelAndView("hello", "now", now);
 

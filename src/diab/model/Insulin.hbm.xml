@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <hibernate-mapping>
-	<class name="Insulin" table="insulin">
+	<class name="diab.model.Insulin" table="insulin">
 		<id name="dataId" type="int" column="data_id">
 		</id>
 		<property name="timeEntered" column="time_entered" 

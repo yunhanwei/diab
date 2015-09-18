@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <hibernate-mapping>
-	<class name="BG" table="BG">
+	<class name="diab.model.BG" table="BG">
 		<id name="dataId" type="int" column="data_id">
 		</id>
 		<property name="timeEntered" column="time_entered" 

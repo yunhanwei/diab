@@ -11,7 +11,7 @@ import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.criterion.Projections;
 
-
+@Repository
 public class UsersDAO {
 
 	@Autowired

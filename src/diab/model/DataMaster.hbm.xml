@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <hibernate-mapping>
-	<class name="DataMaster" table="data_master">
+	<class name="diab.model.DataMaster" table="data_master">
 		<id name="masterId" type="int" column="master_id">
 		</id>
 		<property name="timeEntered" column="time_entered" 
