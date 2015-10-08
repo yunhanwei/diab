@@ -6,14 +6,14 @@ import java.lang.Float;
 import diab.model.DataMaster;
 
 public class Insulin{
-	private int dataId;
+	@Expose private int dataId;
 	private DataMaster dataMaster;
-	private LocalDateTime timeEntered;
-	private Float carbDose;
-	private Float correctionDose;
-	private Float hourlyBasalDose;
-	private String type;
-	private String note;
+	@Expose private LocalDateTime timeEntered;
+	@Expose private Float carbDose;
+	@Expose private Float correctionDose;
+	@Expose private Float hourlyBasalDose;
+	@Expose private String type;
+	@Expose private String note;
 
 
 	//get and set functions

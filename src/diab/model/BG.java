@@ -6,11 +6,11 @@ import java.lang.Float;
 import diab.model.DataMaster;
 
 public class BG{
-	private int dataId;
+	@Expose private int dataId;
 	private DataMaster dataMaster;
-	private LocalDateTime timeEntered;
-	private Float value;
-	private String note;
+	@Expose private LocalDateTime timeEntered;
+	@Expose private Float value;
+	@Expose private String note;
 
 
 	//Get and set functions
